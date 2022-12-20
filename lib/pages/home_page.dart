@@ -9,7 +9,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: MyDrawer(),
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Center(child: Text("AppBar")),
+      ),
       body: Center(
         child: Column(
           children: [Text("Hello Faruqe Hasan")],
