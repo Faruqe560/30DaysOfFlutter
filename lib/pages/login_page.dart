@@ -6,17 +6,58 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
+    return Material(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Column(
           children: [
-            Text(
-              "Login Page",
-              style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.amberAccent),
-            )
+            Image.asset(
+              "assets/images/loginImage.png",
+              fit: BoxFit.cover,
+            ),
+            Text.rich(
+              TextSpan(
+                  text: "W",
+                  style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.deepOrangeAccent,
+                      fontWeight: FontWeight.bold),
+                  children: [
+                    TextSpan(
+                      text: "ELCOM",
+                      style: TextStyle(fontSize: 25, color: Colors.black),
+                    ),
+                    TextSpan(text: "E")
+                  ]),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Enter Your Username",
+                      labelText: "Username",
+                    ),
+                  ),
+                  TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter Your Username",
+                      labelText: "Username",
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  ElevatedButton(onPressed: () {}, child: Text("Login"))
+                ],
+              ),
+            ),
           ],
         ),
       ),
