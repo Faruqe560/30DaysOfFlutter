@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       darkTheme: MyTheme.dartThem(context),
 
       //home: HomePage(),
-      initialRoute: MyRoutes.loginRoute,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
         //"/home": (context) => HomePage(),
