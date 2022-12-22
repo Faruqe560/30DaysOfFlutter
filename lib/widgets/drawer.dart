@@ -23,7 +23,7 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(
               CupertinoIcons.home,
-              color: Colors.amber,
+              color: Colors.white,
               size: 35,
             ),
             title: Text(
@@ -34,12 +34,12 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           Divider(
-            color: Colors.amberAccent,
+            color: Colors.white,
           ),
           ListTile(
             leading: Icon(
               CupertinoIcons.profile_circled,
-              color: Colors.amber,
+              color: Colors.white,
               size: 35,
             ),
             title: Text(
@@ -50,12 +50,12 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           Divider(
-            color: Colors.amberAccent,
+            color: Colors.white,
           ),
           ListTile(
             leading: Icon(
               CupertinoIcons.photo,
-              color: Colors.amber,
+              color: Colors.white,
               size: 35,
             ),
             title: Text(
@@ -66,12 +66,12 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           Divider(
-            color: Colors.amberAccent,
+            color: Colors.white,
           ),
           ListTile(
             leading: Icon(
               CupertinoIcons.phone,
-              color: Colors.amber,
+              color: Colors.white,
               size: 35,
             ),
             title: Text(
@@ -82,12 +82,12 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
           Divider(
-            color: Colors.amberAccent,
+            color: Colors.white,
           ),
           ListTile(
             leading: Icon(
               CupertinoIcons.settings,
-              color: Colors.amber,
+              color: Colors.white,
               size: 35,
             ),
             title: Text(

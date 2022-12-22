@@ -11,7 +11,7 @@ class CalalogHedder extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        "Catalog APP".text.xl5.bold.color(MyTheme.darkBluishColor).make(),
+        "Catalog APP".text.xl5.bold.color(context.theme.accentColor).make(),
         "Tranding Products".text.xl2.make(),
       ],
     );

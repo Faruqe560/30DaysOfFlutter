@@ -17,13 +17,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: '30 days Flutter',
+      themeMode: ThemeMode.system,
       theme: MyTheme.lightThem(context),
-      themeMode: ThemeMode.light,
+
       darkTheme: MyTheme.dartThem(context),
 
       //home: HomePage(),
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => LoginPage(),
         //"/home": (context) => HomePage(),

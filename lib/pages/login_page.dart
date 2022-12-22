@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_8_hourse/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Material(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: context.canvasColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -52,7 +53,8 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       TextSpan(
                         text: "ELCOM",
-                        style: TextStyle(fontSize: 25, color: Colors.black),
+                        style: TextStyle(
+                            fontSize: 25, color: context.theme.accentColor),
                       ),
                       TextSpan(text: "E"),
                     ]),
@@ -62,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(
                     fontSize: 19,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                    color: context.theme.accentColor),
               ),
               SizedBox(
                 height: 20.0,
@@ -110,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       ),
                       SizedBox(
-                        height: 20.0,
+                        height: 50.0,
                       ),
                       // ElevatedButton(
                       //   onPressed: () {
@@ -122,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                       //   ),
                       // ),
                       Material(
-                        color: Color.fromARGB(255, 124, 64, 255),
+                        color: context.theme.buttonColor,
                         borderRadius: BorderRadius.circular(40.0),
                         child: InkWell(
                           onTap: () => moveToHomePage(context),

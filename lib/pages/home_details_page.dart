@@ -15,9 +15,12 @@ class HomeDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Color.fromARGB(255, 139, 144, 239),
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -25,7 +28,7 @@ class HomeDetailsPage extends StatelessWidget {
             ElevatedButton(
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyTheme.darkBluishColor),
+                      MaterialStateProperty.all(context.theme.buttonColor),
                   shape: MaterialStateProperty.all(StadiumBorder())),
               onPressed: () {},
               child: "Add".text.color(Colors.white).xl3.make(),
@@ -47,19 +50,19 @@ class HomeDetailsPage extends StatelessWidget {
                   arcType: VxArcType.CONVEY,
                   edge: VxEdge.TOP,
                   child: Container(
-                    color: Color.fromARGB(255, 139, 144, 239),
+                    color: context.cardColor,
                     width: context.screenWidth,
                     child: Column(
                       children: [
                         catalog.name.text.xl4
-                            .color(MyTheme.darkBluishColor)
+                            .color(context.accentColor)
                             .bold
                             .make(),
                         catalog.desc.text.xl
                             .textStyle(context.captionStyle)
                             .make(),
                         10.heightBox,
-                        "Lorem Ipsum is simply dummy text of r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                        "Lorem Ipsum is simply dummy text  specimen book."
                             .text
                             .textStyle(context.captionStyle)
                             .xl
