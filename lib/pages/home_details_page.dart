@@ -28,45 +28,51 @@ class HomeDetailsPage extends StatelessWidget {
                       MaterialStateProperty.all(MyTheme.darkBluishColor),
                   shape: MaterialStateProperty.all(StadiumBorder())),
               onPressed: () {},
-              child: "Buy".text.color(Colors.white).xl3.make(),
+              child: "Add".text.color(Colors.white).xl3.make(),
             ).h8(context).w32(context),
           ],
         ).p20(),
       ),
       body: SafeArea(
-        bottom: false,
-        child: Column(
-          children: [
-            Hero(
-              tag: Key(catalog.id.toString()),
-              child: Image.network(catalog.image),
-            ).h40(context),
-            Expanded(
-              child: VxArc(
-                height: 35.0,
-                arcType: VxArcType.CONVEY,
-                edge: VxEdge.TOP,
-                child: Container(
-                  color: Color.fromARGB(255, 139, 144, 239),
-                  width: context.screenWidth,
-                  child: Column(
-                    children: [
-                      catalog.name.text.xl4
-                          .color(MyTheme.darkBluishColor)
-                          .bold
-                          .make(),
-                      catalog.desc.text.xl
-                          .textStyle(context.captionStyle)
-                          .make(),
-                      10.heightBox,
-                    ],
-                  ).py64(),
+          bottom: false,
+          child: Column(
+            children: [
+              Hero(
+                tag: Key(catalog.id.toString()),
+                child: Image.network(catalog.image),
+              ).h40(context),
+              Expanded(
+                child: VxArc(
+                  height: 35.0,
+                  arcType: VxArcType.CONVEY,
+                  edge: VxEdge.TOP,
+                  child: Container(
+                    color: Color.fromARGB(255, 139, 144, 239),
+                    width: context.screenWidth,
+                    child: Column(
+                      children: [
+                        catalog.name.text.xl4
+                            .color(MyTheme.darkBluishColor)
+                            .bold
+                            .make(),
+                        catalog.desc.text.xl
+                            .textStyle(context.captionStyle)
+                            .make(),
+                        10.heightBox,
+                        "Lorem Ipsum is simply dummy text of r since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            .text
+                            .textStyle(context.captionStyle)
+                            .xl
+                            .make()
+                            .p12()
+                      ],
+                    ).py64(),
+                  ),
                 ),
               ),
-            ),
-          ],
-        ).px16(),
-      ),
+            ],
+          ) //.px16(),
+          ),
     );
   }
 }
