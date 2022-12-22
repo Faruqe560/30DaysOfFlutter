@@ -6,9 +6,12 @@ import 'package:flutter_8_hourse/pages/login_page.dart';
 import 'package:flutter_8_hourse/utils/routes.dart';
 import 'package:flutter_8_hourse/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+import 'core/store.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(VxState(store: MyStore(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
